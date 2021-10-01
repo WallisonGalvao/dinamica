@@ -24,6 +24,11 @@
         var numero = ipt_numero.value;
         var nome = ipt_nome.value;
 
-        if (numero )
+        if (numero >= 1 || numero <= 10){
+            (Math.random()*10).toFixed()
+        }
+    if(numero >= 11){
+        alert("numero invalido")
     }
+        }    
 </script>
