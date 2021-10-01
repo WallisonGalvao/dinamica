@@ -16,19 +16,32 @@
     <button onclick="sorteio()">
         Sortear
     </button>
+    
 </body>
 </html>
 
 <script>
+    
+    var vezes = 0;
+
+
+
     function sorteio(){
         var numero = ipt_numero.value;
         var nome = ipt_nome.value;
 
+        vezes ++;
+
         if (numero >= 1 || numero <= 10){
-            (Math.random()*10).toFixed()
+            var numeroSorteio = (Math.random()*10).toFixed()
         }
-    if(numero >= 11){
+
+        if(numero >= 11){
         alert("numero invalido")
+        }
+
+         if (numeroSorteio == numero){
+            alert (`Parabens ${nome}, voce foi sorteado(a) após ${vezes} sorteios!`);
+        }
     }
-        }    
 </script>
